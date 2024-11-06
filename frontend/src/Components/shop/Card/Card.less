@@ -1,0 +1,45 @@
+.main-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 0 1 400px;
+    box-shadow: 0 1px 10px black;
+    border-radius: 10px;
+    margin: 10px;
+    transition: all 0.3s ease;
+    aspect-ratio: 5 / 6;
+
+    @media (max-width: 600) {
+        flex: 1 1 100%
+    }
+    &:hover {
+        transform: scale(1.02);
+    }
+}
+
+.image {
+    height: 60%;
+    width: 95%;
+    background-color: aqua;
+}
+
+.card-text {
+    font-size: clamp(22px, 10vw, 40px);
+    font-weight: 600;
+    height: 35%;
+    width: 95%;
+    background-color: antiquewhite;
+}
+
+.detail-btn {
+    background-color: rgb(27, 27, 101);
+    color: white;
+    font-size: clamp(20px, 10vw, 40px);
+    font-weight: 600;
+    height: 50%;
+    width: 90%;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}

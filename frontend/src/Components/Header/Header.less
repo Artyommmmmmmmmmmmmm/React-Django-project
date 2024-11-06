@@ -1,0 +1,34 @@
+.main-header-cont {
+    width: calc(100% - 20px);
+    height: clamp(50px, 25vw, 100px);
+    background-color: rgb(41, 75, 196);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: clamp(10px, 5vw, 25px);
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    @media (max-width: 600px) {
+        justify-content: flex-end;
+    }
+}
+
+.header-logo {
+    position: absolute;
+}
+
+.header-nav-cont {
+    height: clamp(50px, 25vw, 100px);
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.navigate-main {
+    cursor: pointer;
+}

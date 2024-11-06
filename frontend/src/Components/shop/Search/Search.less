@@ -1,0 +1,46 @@
+.overlay {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-form-cont {
+    padding-top: 15px;
+    position: relative;
+    width: 240px;
+    height: 300px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+
+        > input {
+            width: 40%;
+        }
+    }
+}
+
+.close-btn {
+    position: absolute;
+    padding-right: 10px;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+}
