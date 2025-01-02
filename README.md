@@ -1,6 +1,6 @@
 # Проект пока сильно не доработан и пока не дорабатывается 
 ### что бы запустить проект используйте следующие команды
-### (что бы проект работал неоюходимо также установить [python](https://www.python.org/downloads/) и пакетный менеджер pip)
+### (что бы проект работал необходимо также установить [python](https://www.python.org/downloads/) и пакетный менеджер pip)
 
 1. git clone https://github.com/Artyommmmmmmmmmmmmm/React-Django-project
 2. cd React-Django-project
