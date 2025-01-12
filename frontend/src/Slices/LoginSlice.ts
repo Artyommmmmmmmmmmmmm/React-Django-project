@@ -42,11 +42,11 @@ export const login = createAsyncThunk<
   'auth/logins', // Уникальное имя действия
   async (loginData, thunkAPI) => { // Асинхронная функция, которая делает запрос
     try {
-      const response = await $api.post('authdj/login', loginData);
-      console.log(response.data); // Данные передаются в 'fulfilled'
-      return response.data;
+        const response = await $api.post('authdj/login/', loginData);
+        console.log(response.data); // Данные передаются в 'fulfilled'
+        return response.data;
     } catch (error) {
-      const axiosError = error as AxiosError<ErrorResponseData> // Передача ошибки в 'rejected'
+        const axiosError = error as AxiosError<ErrorResponseData> // Передача ошибки в 'rejected'
       if (axiosError.response && axiosError.response.data) {
         return thunkAPI.rejectWithValue(errorTranslate(axiosError.response.data) || 'Fetch failed');
       }

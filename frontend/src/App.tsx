@@ -6,6 +6,7 @@ import ShopPage from './Pages/ShopPage/ShopPage';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 import DetailCanPage from './Pages/DetailCanPage/DetailCanPage';
+import { Resume } from './Components/Resume/Resume';
 import { Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Header/>
       <div className='main'>
         <Routes>
+          <Route path='/' element={<Resume/>}/>
           <Route path='main' element={<ShopPage/>}/>
           <Route path='auth' element={<AuthPage/>}/>
           <Route path='main/detail' element={<DetailCanPage/>}/>

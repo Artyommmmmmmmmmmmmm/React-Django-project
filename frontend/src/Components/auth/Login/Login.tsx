@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import './Login.less'
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, FormEvent } from "react";
 import { login } from "../../../Slices/LoginSlice";
 import { AppDispatch } from "../../../store/store";
 import { RootState } from "../../../store/store";
@@ -15,7 +15,8 @@ export const Login: React.FC = () => {
     const dispatch = useDispatch<AppDispatch>()
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
-    const handleClick = () => {
+    const handleClick = (e: FormEvent) => {
+        e.preventDefault()
         dispatch(login({
             username: username,
             password: password
@@ -24,7 +25,7 @@ export const Login: React.FC = () => {
     useEffect(() => {
     }, [])
     return(
-        <form onSubmit={() => handleClick()} className="login-cont">
+        <form onSubmit={(e) => handleClick(e)} className="login-cont">
             <div className="form-cont">
 
 
@@ -49,7 +50,7 @@ export const Login: React.FC = () => {
             </div>
             <button
             type="submit"
-            onClick={() => handleClick()}>Войти</button>
+            >Войти</button>
         </form>
     )
 }
